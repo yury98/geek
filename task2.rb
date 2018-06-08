@@ -1,7 +1,7 @@
 a = ARGV[0].to_s
 b = ARGV[1].to_s
 i=0
-if (a.length >=1) && (b.length<=10000) && (b.length>0)
+if (a.length >=1) && (b.length<=10000)
   a1=a
   a2 =a
   a.length.times do
@@ -18,6 +18,6 @@ if (a.length >=1) && (b.length<=10000) && (b.length>0)
   end
   d=i
   puts c if c<d
-  puts d if d<c
+  puts d if (d<=c) && (d!=a.length)
   puts -1 if (d==a.length) && (c==a.length)
 end
